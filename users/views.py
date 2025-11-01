@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from .models import ImportedUser
 from .serializers import CSVUploadSerializer
+from .tasks import process_csv_data
 
 class UploadUserView(APIView):
     def post(self,request):
